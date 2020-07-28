@@ -1,6 +1,14 @@
 <template>
   <div class="general-container">
-    <h1>Index</h1>
+    <b-container>
+      <b-row class="justify-content-center">
+        <b-col lg="8">
+          <div class="text-center">
+            <h1>Home</h1>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
