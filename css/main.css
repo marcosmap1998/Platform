@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+  
+.general-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s ease;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0
+}
