@@ -1,4 +1,8 @@
 export default {
+  env: {
+    COOKIE_ASSISTANT: process.env.COOKIE_ASSISTANT || 'COOKIE_ASSISTANT',
+    CHAT_API_URL: process.env.CHAT_API_URL || 'http://localhost:3005'
+  },
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -36,7 +40,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: "@/plugins/aos", ssr: false }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

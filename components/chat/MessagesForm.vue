@@ -3,8 +3,10 @@
     <b-row class="justify-content-center">
       <b-col lg="8">
         <div class="text-center">
-          <input type="text" />
-          <button @click="sendMessage()">Enviar</button>
+          <input v-model="message" type="text" @keyup.enter="sendMessage" />
+          <button @click="sendMessage()">
+            Enviar
+          </button>
         </div>
       </b-col>
     </b-row>
@@ -12,5 +14,21 @@
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'vuex'
+
+export default {
+  methods: {
+    ...mapActions('chatStore', ['sendMessage']),
+  },
+  computed: {
+    message: {
+      get() {
+        return this.$store.state.chatStore.currentMessage
+      },
+      set(value) {
+        this.$store.commit('chatStore/SET_CURRENT_MESSAGE_DATA', value)
+      },
+    },
+  },
+}
 </script>
