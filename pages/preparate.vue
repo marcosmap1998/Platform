@@ -32,18 +32,18 @@
               columns
               class="mt-3 d-flex flex-row flex-wrap justify-content-center"
             >
-              <a href="#" class="card-tel">
+              <button class="btn card-tel">
                 <b-card title="Teléfono de emergencia" img-src="" img-right>
                 </b-card>
-              </a>
-              <a href="#" class="card-dudas">
+              </button>
+              <button class="btn card-dudas">
                 <b-card
                   title="Resuelve tus dudas con Salvi, nuestro Bot"
                   img-src=""
                   img-right
                 >
                 </b-card>
-              </a>
+              </button>
             </b-card-group>
           </div>
         </b-col>
@@ -72,11 +72,16 @@ export default {
 }
 
 .card-tel {
-  width: 40%;
+  width: 45%;
+}
+
+.card-tel:hover,
+.card-dudas:hover {
+  color: #707070;
 }
 
 .card-dudas {
-  width: 40%;
+  width: 45%;
 }
 
 .guia1,
@@ -96,6 +101,7 @@ export default {
   border-width: 2px;
   background: #fff;
   border-color: #12cdd4;
+  color: #12cdd4;
 }
 
 .guia2 {
@@ -106,6 +112,7 @@ export default {
   border-width: 2px;
   background: #fff;
   border-color: #f24726;
+  color: #f24726;
 }
 
 .guia3 {
@@ -116,5 +123,6 @@ export default {
   border-width: 2px;
   border-color: #2862c7;
   background: #fff;
+  color: #2862c7;
 }
 </style>

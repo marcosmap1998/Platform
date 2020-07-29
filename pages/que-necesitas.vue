@@ -17,25 +17,25 @@
               columns
               class="mt-3 d-flex flex-row flex-wrap justify-content-center"
             >
-              <a href="#" class="card-help">
+              <button class="btn card-help">
                 <b-card
                   title="Ayuda, tengo una emergencia"
                   img-src=""
                   img-right
                 >
                 </b-card>
-              </a>
-              <a href="#" class="card-prepare">
+              </button>
+              <button class="btn card-prepare">
                 <b-card title="Prepárate" img-src="" img-right></b-card>
-              </a>
-              <a href="#" class="card-resolve">
+              </button>
+              <button class="btn card-resolve">
                 <b-card
                   title="Resuelve tus dudas con Salvi, nuestro Bot"
                   img-src=""
                   img-right
                 >
                 </b-card>
-              </a>
+              </button>
             </b-card-group>
           </div>
         </b-col>
@@ -64,14 +64,20 @@ export default {
 }
 
 .card-help {
-  width: 80%;
+  width: 90%;
 }
 
 .card-prepare {
-  width: 38%;
+  width: 43%;
 }
 
 .card-resolve {
-  width: 39%;
+  width: 44%;
+}
+
+.card-help:hover,
+.card-prepare:hover,
+.card-resolve:hover {
+  color: #707070;
 }
 </style>
