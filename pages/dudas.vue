@@ -6,7 +6,7 @@
           <div>
             <h3>a Salvo</h3>
           </div>
-          <div class="regresar">
+          <div class="regresar mt-2">
             <a href=""><h5>Regresar</h5></a>
           </div>
         </b-col>

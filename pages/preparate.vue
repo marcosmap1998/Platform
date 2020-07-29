@@ -18,13 +18,13 @@
           </p>
           <div class="d-flex flex-row justify-content-center">
             <button class="btn mx-2 guia1">
-              <i class="far fa-book-medical"></i>
+              <i class="fas fa-book-medical"></i>
             </button>
             <button class="btn mx-2 guia2">
-              <i class="far fa-book-medical"></i>
+              <i class="fas fa-book-medical"></i>
             </button>
             <button class="btn mx-2 guia3">
-              <i class="far fa-book-medical"></i>
+              <i class="fas fa-book-medical"></i>
             </button>
           </div>
           <div class="justify-content-center mt-4">
@@ -33,16 +33,12 @@
               class="mt-3 d-flex flex-row flex-wrap justify-content-center"
             >
               <button class="btn card-tel">
-                <b-card title="Teléfono de emergencia" img-src="" img-right>
-                </b-card>
+                <h3 class="p-3 mt-1">Teléfono de emergencia</h3>
               </button>
               <button class="btn card-dudas">
-                <b-card
-                  title="Resuelve tus dudas con Salvi, nuestro Bot"
-                  img-src=""
-                  img-right
-                >
-                </b-card>
+                <h3 class="p-3 mt-1">
+                  Resuelve tus dudas con Salvi, nuestro Bot
+                </h3>
               </button>
             </b-card-group>
           </div>
@@ -73,6 +69,8 @@ export default {
 
 .card-tel {
   width: 45%;
+  border: 1px solid;
+  border-radius: 15px;
 }
 
 .card-tel:hover,
@@ -82,6 +80,8 @@ export default {
 
 .card-dudas {
   width: 45%;
+  border: 1px solid;
+  border-radius: 15px;
 }
 
 .guia1,
@@ -90,7 +90,7 @@ export default {
   width: 23%;
   height: 10vw;
   border-radius: 15px;
-  font-size: 5em;
+  font-size: 4em;
 }
 
 .guia1 {

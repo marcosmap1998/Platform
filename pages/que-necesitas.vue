@@ -13,30 +13,17 @@
         <b-col lg="8" class="text-center mt-5">
           <h2>¿Qué necesitas?</h2>
           <div class="justify-content-center mt-4">
-            <b-card-group
-              columns
-              class="mt-3 d-flex flex-row flex-wrap justify-content-center"
-            >
-              <button class="btn card-help">
-                <b-card
-                  title="Ayuda, tengo una emergencia"
-                  img-src=""
-                  img-right
-                >
-                </b-card>
-              </button>
-              <button class="btn card-prepare">
-                <b-card title="Prepárate" img-src="" img-right></b-card>
-              </button>
-              <button class="btn card-resolve">
-                <b-card
-                  title="Resuelve tus dudas con Salvi, nuestro Bot"
-                  img-src=""
-                  img-right
-                >
-                </b-card>
-              </button>
-            </b-card-group>
+            <button class="btn card-help mb-3">
+              <h3 class="p-3 mt-1">Ayuda, tengo una emergencia</h3>
+            </button>
+            <button class="btn card-prepare mx-3">
+              <h3 class="p-3 mt-1">Prepárate</h3>
+            </button>
+            <button class="btn card-resolve mx-3">
+              <h3 class="p-3 mt-1">
+                Resuelve tus dudas con Salvi, nuestro Bot
+              </h3>
+            </button>
           </div>
         </b-col>
       </b-row>
@@ -63,21 +50,28 @@ export default {
   text-decoration: none;
 }
 
+.card-resolve,
+.card-help,
+.card-prepare {
+  border: 1px solid;
+  border-radius: 15px;
+}
+
 .card-help {
   width: 90%;
 }
 
 .card-prepare {
-  width: 43%;
+  width: 42%;
 }
 
 .card-resolve {
-  width: 44%;
+  width: 43%;
 }
 
 .card-help:hover,
 .card-prepare:hover,
 .card-resolve:hover {
-  color: #707070;
+  color: #2862c7;
 }
 </style>
