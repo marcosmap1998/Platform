@@ -2,9 +2,22 @@
   <div class="general-container">
     <b-container>
       <b-row class="justify-content-center">
-        <b-col lg="8">
+        <b-col lg="8 d-flex flex-row justify-content-between">
+          <div>
+            <h3>a Salvo</h3>
+          </div>
+          <div class="regresar">
+            <a href=""><h5>Regresar</h5></a>
+          </div>
+        </b-col>
+        <b-col lg="8 d-flex flex-column mt-5">
+          <div class="text-center mt-5">
+            <h2>Resuelve tus dudas</h2>
+          </div>
           <div class="text-center">
-            <h1 class="texeto">dudas</h1>
+            <b-button class="general-button mt-4 btn-comenzar" size="lg">
+              Comenzar
+            </b-button>
           </div>
         </b-col>
       </b-row>
@@ -22,7 +35,24 @@ export default {
 </script>
 
 <style scoped>
-.texeto {
-  font-size: 3rem;
+.btn-comenzar {
+  width: 37%;
+  color: #fff;
+  background: #fb8645;
+  border-color: #fb8645;
+}
+
+.btn-comenzar:hover {
+  background: #fff;
+  color: #fb8645;
+}
+
+.regresar a {
+  color: #000;
+}
+
+.regresar a:hover {
+  color: #000;
+  text-decoration: none;
 }
 </style>
