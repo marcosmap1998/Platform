@@ -17,9 +17,15 @@
             sucitar...
           </p>
           <div class="d-flex flex-row justify-content-center">
-            <button class="btn mx-2 guia1"></button>
-            <button class="btn mx-2 guia2"></button>
-            <button class="btn mx-2 guia3"></button>
+            <button class="btn mx-2 guia1">
+              <i class="far fa-book-medical"></i>
+            </button>
+            <button class="btn mx-2 guia2">
+              <i class="far fa-book-medical"></i>
+            </button>
+            <button class="btn mx-2 guia3">
+              <i class="far fa-book-medical"></i>
+            </button>
           </div>
           <div class="justify-content-center mt-4">
             <b-card-group
@@ -79,17 +85,36 @@ export default {
   width: 23%;
   height: 10vw;
   border-radius: 15px;
+  font-size: 5em;
 }
 
 .guia1 {
   background: #12cdd4;
 }
 
+.guia1:hover {
+  border-width: 2px;
+  background: #fff;
+  border-color: #12cdd4;
+}
+
 .guia2 {
   background: #f24726;
 }
 
+.guia2:hover {
+  border-width: 2px;
+  background: #fff;
+  border-color: #f24726;
+}
+
 .guia3 {
   background: #2862c7;
+}
+
+.guia3:hover {
+  border-width: 2px;
+  border-color: #2862c7;
+  background: #fff;
 }
 </style>
