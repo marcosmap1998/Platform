@@ -90,6 +90,7 @@ export default {
 <style scoped>
 .mapa-content {
   margin: 0 auto;
+  margin-bottom: 120px;
 }
 
 .boton-principal p {
@@ -244,6 +245,10 @@ a {
 
   .caja5 {
     margin-bottom: 12vh;
+  }
+
+  .mapa-content {
+    margin-bottom: 0px;
   }
 }
 </style>
