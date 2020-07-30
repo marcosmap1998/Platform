@@ -10,11 +10,22 @@
                 class="index-element__container text-center"
               >
                 <h1>aSalvo</h1>
-                <button class="general-button orange mb-2" @click="view = 2">
+                <button
+                  v-show="!isRegister"
+                  class="general-button orange mb-2"
+                  @click="view = 3"
+                >
                   Regístrate aquí
                 </button>
-                <button class="general-button blue mb-2" @click="view = 3">
+                <button class="general-button blue mb-2" @click="view = 2">
                   Ya tengo cuenta
+                </button>
+                <button
+                  v-if="isRegister"
+                  class="index-element__button"
+                  @click="view = 3"
+                >
+                  Regístrate aquí
                 </button>
               </div>
               <div
@@ -26,15 +37,14 @@
                   <input
                     v-for="(element, index) in loginInputs"
                     :key="index + 'loginForm'"
-                    v-model="login[element.input]"
+                    v-model="loginObj[element.input]"
                     class="index-element__input mb-2 pl-3"
-                    type="text"
                     :placeholder="element.placeholder"
+                    :type="element.type ? element.type : 'text'"
                   />
                   <button class="general-button orange mb-2">
                     Ingresar
                   </button>
-                  {{ login }}
                 </form>
               </div>
               <div v-else class="index-element__container text-center">
@@ -43,15 +53,14 @@
                   <input
                     v-for="(element, index) in signUpInputs"
                     :key="index + 'signUpForm'"
-                    v-model="signUp[element.input]"
+                    v-model="signUpObj[element.input]"
                     class="index-element__input mb-2 pl-3"
-                    type="text"
+                    :type="element.type ? element.type : 'text'"
                     :placeholder="element.placeholder"
                   />
                   <button class="general-button orange mb-2">
                     Ingresar
                   </button>
-                  {{ signUp }}
                 </form>
               </div>
             </div>
@@ -66,8 +75,11 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   layout: 'index',
+  middleware: ['check-auth'],
   layoutTransition: {
     name: 'layout',
     mode: 'out-in',
@@ -75,33 +87,60 @@ export default {
   data() {
     return {
       isActive: true,
+      isRegister: false,
       view: 1,
-      login: {},
-      signUp: {},
+      loginObj: {},
+      signUpObj: {},
       loginInputs: [
         { placeholder: 'Correo', input: 'email' },
-        { placeholder: 'Contraseña', input: 'password' },
+        { placeholder: 'Contraseña', input: 'password', type: 'password' },
       ],
       signUpInputs: [
         { placeholder: 'Nombre Completo', input: 'name' },
         { placeholder: 'Correo', input: 'email' },
         { placeholder: 'Telefóno', input: 'phone' },
-        { placeholder: 'Contraseña', input: 'password' },
+        { placeholder: 'Contraseña', input: 'password', type: 'password' },
       ],
     }
   },
+  computed: {
+    loading: {
+      get() {
+        return this.$store.state.authStore.loading
+      },
+      set(value) {
+        this.$store.commit('authStore/SET_LOADING_DATA', value)
+      },
+    },
+  },
   watch: {
     view() {
-      this.login = {}
-      this.signUp = {}
+      this.loginObj = {
+        email: 'hrvo0298@gmail.com',
+        password: '12345678',
+      }
+      this.signUpObj = {
+        name: 'Hector Ruben Vazquez',
+        email: 'hrvo0298@gmail.com',
+        phone: '12345678',
+        password: '12345678',
+      }
     },
   },
   methods: {
+    ...mapActions('authStore', ['login', 'register']),
     loginForm(e) {
       e.preventDefault()
+      this.login(this.loginObj)
     },
-    signUpForm(e) {
+    async signUpForm(e) {
       e.preventDefault()
+      await this.register(this.signUpObj)
+      if (this.loading) {
+        this.isRegister = true
+        this.view = 1
+        this.loading = false
+      }
     },
   },
 }

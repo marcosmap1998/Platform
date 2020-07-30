@@ -14,14 +14,18 @@
           <h2>¿Qué necesitas?</h2>
           <div class="justify-content-center mt-4">
             <button class="btn card-help mb-3">
-              <h3 class="p-3 mt-1">Ayuda, tengo una emergencia</h3>
+              <h3 class="p-3 mt-1" @click="printToken()">
+                Ayuda, tengo una emergencia
+              </h3>
             </button>
-            <button class="btn card-prepare mx-3">
+            <button class="btn card-prepare mx-3" @click="checkSession()">
               <h3 class="p-3 mt-1">Prepárate</h3>
             </button>
             <button class="btn card-resolve mx-3">
               <h3 class="p-3 mt-1">
-                Resuelve tus dudas con Salvi, nuestro Bot
+                <nuxt-link to="/chat"
+                  >Resuelve tus dudas con Salvi, nuestro Bot</nuxt-link
+                >
               </h3>
             </button>
           </div>
@@ -32,10 +36,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   layoutTransition: {
     name: 'layout',
     mode: 'out-in',
+  },
+  methods: {
+    ...mapActions('authStore', ['checkSession']),
+  },
+  created() {
+    this.checkSession()
   },
 }
 </script>

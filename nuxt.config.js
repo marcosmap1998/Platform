@@ -1,7 +1,9 @@
 export default {
   env: {
     COOKIE_ASSISTANT: process.env.COOKIE_ASSISTANT || 'COOKIE_ASSISTANT',
-    CHAT_API_URL: process.env.CHAT_API_URL || 'http://localhost:3005'
+    COOKIE_SESSION: process.env.COOKIE_SESSION|| 'COOKIE_SESSION',
+    CHAT_API_URL: process.env.CHAT_API_URL || 'http://localhost:3005',
+    AUTH_API_URL: process.env.AUTH_API_URL || 'http://localhost:3010'
   },
   /*
    ** Nuxt rendering mode
@@ -29,6 +31,9 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      { src: 'https://kit.fontawesome.com/c559ab67a1.js', crossorigin:'anonymous' }
+    ]
   },
   /*
    ** Global CSS
