@@ -1,15 +1,7 @@
 <template>
   <div class="general-container">
-    <b-row class="justify-content-center">
-      <b-col lg="8" class="d-flex flex-row justify-content-between">
-        <div>
-          <h3>a Salvo</h3>
-        </div>
-        <div class="regresar mt-1">
-          <a href=""><h5>Regresar</h5></a>
-        </div>
-      </b-col>
-      <b-col lg="8" class="text-center mt-5">
+    <b-row class="justify-content-center preparate">
+      <b-col lg="8" class="text-center">
         <h2>¿Cuál es la emergencia?</h2>
         <p>
           Da clic en el botón según tu emergencia y te pondremos en contacto...
@@ -45,13 +37,8 @@ export default {
 </script>
 
 <style scoped>
-.regresar a {
-  color: #000;
-}
-
-.regresar a:hover {
-  color: #000;
-  text-decoration: none;
+.preparate {
+  margin-top: 70px;
 }
 
 .card-emergencia {
@@ -104,5 +91,62 @@ export default {
   border-color: #2862c7;
   background: #fff;
   color: #2862c7;
+}
+
+@media screen and (max-width: 800px) {
+  .guia1,
+  .guia2,
+  .guia3 {
+    width: 18%;
+    height: 12vw;
+    border-radius: 15px;
+    font-size: 2.5em;
+  }
+
+  .card-emergencia {
+    width: 60%;
+  }
+
+  .card-emergencia h3 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .guia1,
+  .guia2,
+  .guia3 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .guia1,
+  .guia2,
+  .guia3 {
+    width: 23%;
+    height: 17vw;
+    border-radius: 15px;
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  p {
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 80%;
+    font-size: 15px;
+  }
+
+  .card-emergencia {
+    width: 70%;
+  }
+
+  .card-emergencia h3 {
+    font-size: 22px;
+  }
 }
 </style>

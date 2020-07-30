@@ -45,7 +45,19 @@ export default {
 </script>
 
 <style>
+.barra_nav {
+  background-color: #12cdd4;
+}
+
 .icono {
   font-size: 2em;
+}
+
+.link {
+  color: #fedfda;
+}
+
+.link:hover {
+  color: #fff;
 }
 </style>

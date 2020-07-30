@@ -2,23 +2,13 @@
   <div class="general-container">
     <b-container>
       <b-row class="justify-content-center">
-        <b-col lg="8 d-flex flex-row justify-content-between">
-          <div>
-            <h3>a Salvo</h3>
-          </div>
-          <div class="regresar">
-            <a href=""><h5>Regresar</h5></a>
-          </div>
-        </b-col>
         <b-col lg="8" class="text-center mt-5">
           <h2>¿Qué necesitas?</h2>
           <div class="justify-content-center mt-4">
             <button class="btn card-help mb-3">
-              <h3 class="p-3 mt-1" @click="printToken()">
-                Ayuda, tengo una emergencia
-              </h3>
+              <h3 class="p-3 mt-1">Ayuda, tengo una emergencia</h3>
             </button>
-            <button class="btn card-prepare mx-3" @click="checkSession()">
+            <button class="btn card-prepare mx-3">
               <h3 class="p-3 mt-1">Prepárate</h3>
             </button>
             <button class="btn card-resolve mx-3">
@@ -85,5 +75,22 @@ export default {
 .card-prepare:hover,
 .card-resolve:hover {
   color: #2862c7;
+}
+
+@media screen and (max-width: 800px) {
+  .card-prepare {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .card-resolve {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 </style>

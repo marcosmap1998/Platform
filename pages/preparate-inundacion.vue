@@ -1,14 +1,6 @@
 <template>
   <div class="general-container estilo">
     <b-row class="mt-5 justify-content-center">
-      <b-col lg="8" class="d-flex flex-row justify-content-between">
-        <div>
-          <h3>a Salvo</h3>
-        </div>
-        <div class="regresar mt-1">
-          <a href=""><h5>Regresar</h5></a>
-        </div>
-      </b-col>
       <b-col lg="8" class="d-flex flex-column justify-content-center mt-5">
         <h2 class="text-center mt-5 mb-2">Prepárate para una inundación:</h2>
         <p class="text-center texto">

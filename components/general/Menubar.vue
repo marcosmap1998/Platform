@@ -1,7 +1,7 @@
 <template>
   <div class="general-container">
     <b-container>
-      <b-row class="justify-content-center">
+      <b-row class="justify-content-center mt-4">
         <b-col lg="8" class="d-flex flex-row justify-content-between">
           <div>
             <h3>a Salvo</h3>
