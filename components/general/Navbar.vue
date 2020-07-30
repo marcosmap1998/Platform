@@ -1,9 +1,5 @@
 <template>
-  <b-navbar
-    toggleable="sm"
-    fixed="bottom"
-    class="barra_nav justify-content-end"
-  >
+  <b-navbar toggleable="sm" class="barra_nav fixed-bottom justify-content-end">
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav class="justify-content-center">
@@ -49,7 +45,6 @@ export default {
 
 <style>
 .barra_nav {
-  height: 10vh;
   background-color: #12cdd4;
 }
 
@@ -63,11 +58,5 @@ export default {
 
 .link:hover {
   color: #fff;
-}
-
-@media screen and (max-width: 800px) {
-  .icono {
-    font-size: 1.5em;
-  }
 }
 </style>
