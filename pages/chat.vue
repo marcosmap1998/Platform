@@ -33,6 +33,10 @@ export default {
   },
   methods: {
     ...mapActions('chatStore', ['getAssistantData']),
+    ...mapActions('authStore', ['checkSession']),
+  },
+  created() {
+    this.checkSession()
   },
   mounted() {
     this.getAssistantData()

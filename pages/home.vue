@@ -13,7 +13,9 @@
             </button>
             <button class="btn card-resolve mx-3">
               <h3 class="p-3 mt-1">
-                Resuelve tus dudas con Salvi, nuestro Bot
+                <nuxt-link to="/chat"
+                  >Resuelve tus dudas con Salvi, nuestro Bot</nuxt-link
+                >
               </h3>
             </button>
           </div>
@@ -24,10 +26,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   layoutTransition: {
     name: 'layout',
     mode: 'out-in',
+  },
+  methods: {
+    ...mapActions('authStore', ['checkSession']),
+  },
+  created() {
+    this.checkSession()
   },
 }
 </script>
