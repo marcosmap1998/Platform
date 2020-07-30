@@ -2,14 +2,6 @@
   <div class="general-container">
     <b-container>
       <b-row class="justify-content-center">
-        <b-col lg="8" class="d-flex flex-row justify-content-between">
-          <div>
-            <h3>a Salvo</h3>
-          </div>
-          <div class="regresar mt-1">
-            <a href=""><h5>Regresar</h5></a>
-          </div>
-        </b-col>
         <b-col lg="8" class="text-center mt-5">
           <h2>¡Prepárate!</h2>
           <p>
@@ -58,15 +50,6 @@ export default {
 </script>
 
 <style scoped>
-.regresar a {
-  color: #000;
-}
-
-.regresar a:hover {
-  color: #000;
-  text-decoration: none;
-}
-
 .card-tel {
   width: 45%;
   border: 1px solid;

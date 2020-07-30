@@ -4,9 +4,9 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav class="justify-content-center">
         <b-navbar-nav>
-          <b-nav-item href="/home" class="mx-3 icono"
-            ><i class="fas fa-home"></i
-          ></b-nav-item>
+          <b-nav-item href="/home" class="mx-3 icono">
+            <nuxt-link to="/home">home<!--<i class="fas fa-home"></i>--></nuxt-link>
+          </b-nav-item>
           <b-nav-item href="#" class="mx-3 icono"
             ><i class="fas fa-phone"></i
           ></b-nav-item>
