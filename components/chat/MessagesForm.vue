@@ -2,11 +2,20 @@
   <b-container>
     <b-row class="justify-content-center">
       <b-col lg="8">
-        <div class="text-center">
-          <input v-model="message" type="text" @keyup.enter="sendMessage" />
-          <button @click="sendMessage()">
-            Enviar
-          </button>
+        <div class="text-center message">
+          <div class="mensaje">
+            <input
+              v-model="message"
+              type="text"
+              class="form-control"
+              @keyup.enter="sendMessage"
+            />
+          </div>
+          <div class="btn-enviar">
+            <button class="btn" @click="sendMessage()">
+              Enviar
+            </button>
+          </div>
         </div>
       </b-col>
     </b-row>
@@ -32,3 +41,30 @@ export default {
   },
 }
 </script>
+
+<style>
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mensaje {
+  width: 80%;
+}
+
+.btn-enviar {
+  width: 20%;
+}
+
+.btn-enviar button {
+  background-color: #fb8645;
+  color: #fff;
+}
+
+.btn-enviar button:hover {
+  background-color: #fff;
+  border: 1px solid #fb8645;
+  color: #fb8645;
+}
+</style>
