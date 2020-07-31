@@ -109,6 +109,14 @@ export default {
     width: 25%;
     height: 18vh;
   }
+
+  .card-emergencia {
+    width: 60%;
+  }
+
+  .card-emergencia h3 {
+    font-size: 26px;
+  }
 }
 
 @media screen and (max-width: 500px) {

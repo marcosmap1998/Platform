@@ -26,6 +26,10 @@ export default {
 </script>
 
 <style scoped>
+.preparate {
+  margin-top: 120px;
+}
+
 .texto {
   font-size: 20px;
 }

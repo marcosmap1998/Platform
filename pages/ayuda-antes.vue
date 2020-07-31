@@ -131,6 +131,9 @@ export default {
   height: 11vw;
   border-radius: 15px;
   align-items: center;
+  height: 10vw;
+  border-radius: 15px;
+  font-size: 4em;
 }
 
 .guia1 {
@@ -151,6 +154,20 @@ export default {
   .guia3 {
     height: 15vw;
   }
+
+
+  .guia3 {
+    background: #2862c7;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .guia1,
+  .guia2,
+  .guia3 {
+    font-size: 3em;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -159,6 +176,8 @@ export default {
   .guia3 {
     width: 18%;
     height: 13vw;
+    border-radius: 15px;
+    font-size: 2.5em;
   }
 
   .card-tel h3,
@@ -183,6 +202,9 @@ export default {
   .card-dudas {
     margin-bottom: 15px;
     width: 90%;
+    height: 12vw;
+    border-radius: 15px;
+    font-size: 2em;
   }
 
   .card-tel h3,
@@ -213,6 +235,8 @@ export default {
   .guia3 {
     width: 25%;
     height: 20vw;
+    border-radius: 15px;
+    font-size: 1.5em;
   }
 
   .card-dudas,
@@ -226,5 +250,6 @@ export default {
   .card-dudas h3 {
     font-size: 18px;
   }
+
 }
 </style>

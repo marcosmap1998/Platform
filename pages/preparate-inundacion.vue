@@ -26,6 +26,15 @@ export default {
 </script>
 
 <style scoped>
+.regresar a {
+  color: #000;
+}
+
+.regresar a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
 .texto {
   font-size: 20px;
 }

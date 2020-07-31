@@ -114,10 +114,6 @@ export default {
   color: #f24726;
 }
 
-.card-resolve:hover {
-  color: #2862c7;
-}
-
 .card-prepare:hover {
   color: #1993f2;
 }
