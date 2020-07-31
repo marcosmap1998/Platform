@@ -2,22 +2,22 @@
   <div class="general-container">
     <b-container>
       <b-row class="justify-content-center">
-        <b-col lg="8" class="text-center mt-5">
+        <b-col lg="8" class="text-center">
           <h2>¿Qué necesitas?</h2>
           <div class="justify-content-center mt-4">
-            <button class="btn card-help mb-3">
-              <h3 class="p-3 mt-1">Ayuda, tengo una emergencia</h3>
-            </button>
-            <button class="btn card-prepare mx-3">
-              <h3 class="p-3 mt-1">Prepárate</h3>
-            </button>
-            <button class="btn card-resolve mx-3">
+            <nuxt-link class="btn card-help mb-3" to="/ayuda-durante">
               <h3 class="p-3 mt-1">
-                <nuxt-link to="/chat"
-                  >Resuelve tus dudas con Salvi, nuestro Bot</nuxt-link
-                >
+                Ayuda, tengo una emergencia
               </h3>
-            </button>
+            </nuxt-link>
+            <nuxt-link class="btn card-prepare mx-3" to="/ayuda-antes">
+              <h3 class="p-3 mt-1">Prepárate</h3>
+            </nuxt-link>
+            <nuxt-link class="btn card-resolve mx-3" to="/salvi-nuestroBot">
+              <h3 class="p-3 mt-1">
+                Resuelve tus dudas con Salvi, nuestro Bot
+              </h3>
+            </nuxt-link>
           </div>
         </b-col>
       </b-row>
@@ -35,6 +35,9 @@ export default {
   },
   methods: {
     ...mapActions('authStore', ['checkSession']),
+    goToPage(page) {
+      this.$router.push({ name: page })
+    },
   },
   created() {
     this.checkSession()

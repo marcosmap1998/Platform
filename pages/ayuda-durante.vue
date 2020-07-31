@@ -1,22 +1,24 @@
 <template>
   <div class="general-container">
-    <b-row class="justify-content-center preparate">
-      <b-col lg="8" class="d-flex flex-column justify-content-center">
-        <h2 class="text-center mb-3">¿Qué necesitas?</h2>
-        <button
-          class="btn my-3 p-3 btn-service d-flex flex-row justify-content-between"
-        >
-          <h4>Llamar a los servicios de emergencia de tu comunidad</h4>
-          <i class="fas fa-phone-volume mx-2"></i>
-        </button>
-        <button
-          class="btn my-3 p-3 btn-zone d-flex flex-row justify-content-between"
-        >
-          <h4>Ubica las zonas de riesgo y las zonas seguras cerca de ti</h4>
-          <i class="fas fa-search-location mx-2"></i>
-        </button>
-      </b-col>
-    </b-row>
+    <b-container>
+      <b-row class="justify-content-center preparate">
+        <b-col lg="8" class="d-flex flex-column justify-content-center">
+          <h2 class="text-center mb-3">¿Qué necesitas?</h2>
+          <button
+            class="btn my-3 p-3 btn-service d-flex flex-row justify-content-between"
+          >
+            <h4>Llamar a los servicios de emergencia de tu comunidad</h4>
+            <i class="fas fa-phone-volume mx-2"></i>
+          </button>
+          <button
+            class="btn my-3 p-3 btn-zone d-flex flex-row justify-content-between"
+          >
+            <h4>Ubica las zonas de riesgo y las zonas seguras cerca de ti</h4>
+            <i class="fas fa-search-location mx-2"></i>
+          </button>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -30,10 +32,6 @@ export default {
 </script>
 
 <style scoped>
-.preparate {
-  margin-top: 80px;
-}
-
 .btn-service,
 .btn-zone {
   margin: 0 auto;

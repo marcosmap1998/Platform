@@ -1,29 +1,27 @@
 <template>
   <div class="general-container">
-    <b-row class="justify-content-center preparate">
-      <b-col lg="8" class="text-center">
-        <h2>¿Cuál es la emergencia?</h2>
-        <p>
-          Da clic en el botón según tu emergencia y te pondremos en contacto...
-        </p>
-        <div class="d-flex flex-row justify-content-center">
-          <button class="btn mx-2 guia1">
-            <i class="far fa-hospital"></i>
-          </button>
-          <button class="btn mx-2 guia2">
-            <i class="far fa-hospital"></i>
-          </button>
-          <button class="btn mx-2 guia3">
-            <i class="far fa-hospital"></i>
-          </button>
-        </div>
-        <div class="justify-content-center mt-4">
-          <button class="btn card-emergencia">
-            <h3 class="p-3 mt-1">Otra emergencia</h3>
-          </button>
-        </div>
-      </b-col>
-    </b-row>
+    <b-container>
+      <b-row class="justify-content-center">
+        <b-col lg="8" class="text-center">
+          <h2>¿Cuál es la emergencia?</h2>
+          <p>
+            Da clic en el botón según tu emergencia y te pondremos en
+            contacto...
+          </p>
+          <div class="d-flex flex-row justify-content-center">
+            <button class="btn mx-2 guia1">
+              <i class="far fa-hospital"></i>
+            </button>
+            <button class="btn mx-2 guia2">
+              <i class="far fa-hospital"></i>
+            </button>
+            <button class="btn mx-2 guia3">
+              <i class="far fa-hospital"></i>
+            </button>
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 

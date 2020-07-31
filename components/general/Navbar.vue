@@ -11,11 +11,6 @@
           </div>
           <div class="mx-3 icono">
             <nuxt-link class="text-white" to="/home"
-              ><i class="fas fa-phone"></i
-            ></nuxt-link>
-          </div>
-          <div class="mx-3 icono">
-            <nuxt-link class="text-white" to="/home"
               ><i class="fas fa-map-marker-alt"></i
             ></nuxt-link>
           </div>
@@ -25,7 +20,7 @@
             ></nuxt-link>
           </div>
           <div class="mx-3 icono">
-            <nuxt-link class="text-white" to="/chat"
+            <nuxt-link class="text-white" to="/salvi"
               ><i class="fas fas fa-comment-alt"></i
             ></nuxt-link>
           </div>

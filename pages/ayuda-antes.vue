@@ -2,22 +2,22 @@
   <div class="general-container">
     <b-container>
       <b-row class="justify-content-center">
-        <b-col lg="8" class="text-center preparate">
+        <b-col lg="8" class="text-center">
           <h2>¡Prepárate!</h2>
           <p>
             Descarga las guías de ayuda según el desastre que se pueda
             sucitar...
           </p>
           <div class="d-flex flex-row justify-content-center">
-            <button class="btn mx-2 guia1">
+            <nuxt-link to="/preparate-inundacion" class="btn mx-2 guia1">
               <i class="fas fa-book-medical"></i>
-            </button>
-            <button class="btn mx-2 guia2">
+            </nuxt-link>
+            <nuxt-link to="/preparate-incendio" class="btn mx-2 guia2">
               <i class="fas fa-book-medical"></i>
-            </button>
-            <button class="btn mx-2 guia3">
+            </nuxt-link>
+            <nuxt-link to="/preparate-huracan" class="btn mx-2 guia3">
               <i class="fas fa-book-medical"></i>
-            </button>
+            </nuxt-link>
           </div>
           <div class="justify-content-center mt-4">
             <b-card-group
@@ -50,10 +50,6 @@ export default {
 </script>
 
 <style scoped>
-.preparate {
-  margin-top: 45px;
-}
-
 .card-tel {
   width: 45%;
   border: 1px solid;
